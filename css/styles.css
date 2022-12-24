@@ -1,0 +1,354 @@
+/* --------------------------------------------- GENERALES --------------------------------------------- */
+html {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    background: rgb(0 0 0);
+    position: relative;
+    min-height: 100vh;
+    color: #ebebea;
+
+    position: relative;
+    padding-bottom: 70px;
+  }
+
+  a {
+    color: #ebebea;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+/*  ---------------------------------------------  NAV  --------------------------------------------- */
+.barNav {
+    display: flex;
+    justify-content: center;
+    background: rgb(42 42 42 / 70%);
+    height: 50px;
+}
+
+.iconoTitulo {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+
+.barNav h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    font-size: 30px;
+    
+}
+
+@media (min-width: 768px) {
+
+    .barNav h1 {
+        width: 90%; 
+        font-size: 35px;
+    }
+
+    .iconoTitulo {
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+    }
+}
+
+  /*  ---------------------------------------------  DARK AND LIGHT MODE  --------------------------------------------- */
+.mode {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.figuraLight {
+    border-radius: 160px;
+    background: #222;
+    width: 50px;
+    height: 25px;
+    transition: 0.5s;
+    box-shadow: inset 0 8px 60px rgb(0 0 0 / 10%),
+                inset 0 8px 8px rgb(0 0 0 / 10%),
+                inset 0 -4px 4px rgb(0 0 0 / 10%);
+    cursor: pointer;
+}
+
+.indicadorLight {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(to bottom, #444, #222);
+    border-radius: 50%;
+    transform: scale(0.9);
+    box-shadow: 0 8px 40px rgb(0 0 0 / 50%),
+                inset 0 4px 4px rgb(255 255 255 / 20%),
+                inset 0 -4px 4px rgb(255 255 255 / 20%);
+    transition: 0.5s;
+}
+
+.indicadorDark {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-left: 24px;
+    border-radius: 50%;
+    transform: scale(0.9);
+    background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+    box-shadow: 0 8px 20px rgb(0 0 0 / 10%),
+                inset 0 4px 4px rgb(255 255 255 / 100%),
+                inset 0 -4px 4px rgb(255 255 255 / 100%);
+    transition: 0.5s;
+}
+
+.figuraDark {
+    border-radius: 160px;
+    width: 50px;
+    height: 25px;
+    transition: 0.5s;
+    background: #ffffff;
+    box-shadow: inset 0 2px 60px rgb(0 0 0 / 10%),
+                inset 0 2px 8px rgb(0 0 0 / 10%),
+                inset 0 -4px 8px rgb(0 0 0 / 5%);
+    cursor: pointer;
+}
+
+.solLight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+
+    margin-left: 27px;
+    margin-top: 3px;
+}
+
+.lunaDark {
+    display: none;
+}
+
+.lunaLight {
+    display: block;
+    margin-top: 3px;
+    width: 20px;
+    height: 20px;
+}
+
+.solDark {
+    display: none;
+}
+
+/*  ---------------------------------------------  CONTENT  --------------------------------------------- */
+.content {
+    position: relative;
+    background: rgb(42 42 42 / 100%);
+    width: 85%;
+    margin: auto;
+    margin-top: 20px; 
+    padding: 20px;
+    border-radius: 20px;
+    display: grid;
+
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(235,235,234,0.5);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(235,235,234,0.5);
+    box-shadow: 4px 4px 8px 0px rgba(235,235,234,0.5);
+}
+
+.content h3 {
+    border-bottom: 1px solid #ebebea;
+    padding: 2px 0px;
+    margin-bottom: 3px;
+}
+
+.content input {
+    margin-bottom: 10px;
+    margin-left: 5px;
+    padding: 5px;
+    background: rgb(210 188 176 / 50%);
+    color: #ebebea;
+    border: 1px solid #000;
+}
+
+.entradas {
+    text-align: center;
+}
+
+.lbGasto {
+    margin-right: 15px;
+}
+
+.btnConteiner {
+    text-align: center;
+}
+
+.btnAgregar, .btnFin, .btnLimpiar {
+    width: 50%;
+    background: rgb(210 188 176 / 50%) !important;
+    border: 1px solid #000 !important;
+    color: #ebebea;
+}
+
+.btnAgregar:active, .btnFin:active, .btnLimpiar:active {
+    background: rgb(210 188 176 / 100%) !important;
+}
+
+.listContainer {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ebebea;
+    margin-bottom: 10px;
+    min-height: 100px;
+    padding: 5px 10px 5px 10px;
+}
+
+.listas {
+    display: flex;
+    justify-content: space-between;
+    min-height: 100px;
+}
+
+.totalContainer{
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #ffffff;
+    padding-top: 3px;
+}
+
+.resultado {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+    min-height: 100px;
+    padding-bottom:5px;
+    text-align: center;
+}
+
+.resultado h3 {
+    width: 100%;
+}
+
+.totales {
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    padding: 10px 0px;
+    min-height: 25px;
+}
+
+.cuentas {
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    padding: 10px 0px;
+    min-height: 25px;
+}
+
+.cancelaciones {
+    width: 100%;
+    padding: 10px 0px;
+    min-height: 25px;
+}
+
+.abonar {
+    color: #b72424;
+}
+
+.obtener {
+    color: #2ab631;
+}
+
+@media (min-width: 768px) {
+
+    .content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .content input {
+        width: 300px;
+    }
+    
+    .btnAgregar, .btnFin, .btnLimpiar {
+        width: 200px !important;
+    }
+    
+    .listContainer {
+        width: 400px;
+        min-height: 250px;
+        padding: 10px 30px 5px 30px;
+    }
+
+    .listas {
+        min-height: 250px;
+    }
+
+    .totalContainer {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .resultado {
+        width: 400px;
+        min-height: 250px;
+    }
+
+    .totales, .cuentas, .cancelaciones {
+        min-height: 70px;
+    }
+}
+
+/*  ---------------------------------------------  ESTILOS DEL FOOTER  --------------------------------------------- */
+.footer {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    background: rgb(42 42 42 / 70%);
+
+    position: absolute;
+    bottom: 0;
+}
+
+.footer p {
+    font-size: 8px;
+    padding-left: 10px;
+}
+
+.footer p span {
+    font-size: 7px;
+}
+
+.footerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+@media (min-width: 768px) {    
+    .footer p {
+        font-size: 12px;
+    }
+    .footer p span {
+        font-size: 8px;
+    }
+}
+

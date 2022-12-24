@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Agustin Alonso Cantoli">
+
+    <title>Clarita la Cuenta</title>
+
+    <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5412/5412659.png">
+
+</head>
+<body>
+    <header class="barNav">
+        <h1>
+            Clarita la Cuenta
+            <img class="iconoTitulo" src="https://cdn-icons-png.flaticon.com/512/5412/5412659.png" alt="iconoTitulo">
+
+        </h1>
+        
+
+        <div class="mode">
+            <div class="figura figuraLight">
+              <div class="indicador indicadorLight"></div>
+              <img class="sol solLight" src="./img/sol.png" alt="sol">
+              <img class="luna lunaDark" src="./img/luna.png" alt="luna">
+            </div>
+        </div>
+
+    </header>
+
+    <section>
+        <div class="content">
+
+            <div class="entradas">
+                <div>
+                    <label name="nombre">Nombre</label>
+                    <input type="text" class="addNombre">
+                </div>
+    
+                <div>
+                    <label class="lbGasto" name="gasto">Gasto</label>
+                    <input type="number" class="addGasto">
+                </div>
+            </div>
+            
+            <div class="btnConteiner">
+                <input class="btnAgregar" type="submit" value="Agregar">
+            </div>
+            
+
+            <div class="listContainer">
+                <div class="listas">
+                    <div>
+                        <h3>Nombres</h3>
+                        <ul class="listNombres">
+                        </ul>
+                    </div>
+        
+                    <div>
+                        <h3>Gastos</h3>
+                        <ul class="listGastos">
+                        </ul>
+                    </div>
+    
+                    <div>
+                        <h3>Borrar</h3>
+                        <ul class="icono">
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="totalContainer">
+                    <p>Total</p>
+                    <p class="totalGastos"></p>
+                </div>
+                
+            </div>
+
+            <div class="btnConteiner">
+                <input class="btnFin" type="submit" value="Finalizar">
+                <input class="btnLimpiar" type="submit" value="Borrar Todo">
+            </div>
+            
+            <div class="resultado">
+                <h3>Resultados</h3>
+                
+                <div class="totales">
+                    <p class="totalPersonas"></p>
+                    <p class="division"></p>
+                </div>
+
+                <div class="cuentas">
+                
+                </div>
+
+                <div class="cancelaciones">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+          <div class="footerContainer">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <rect x="4" y="4" width="16" height="16" rx="4" />
+                  <circle cx="12" cy="12" r="3" />
+                  <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+              </svg>
+              <p>Seguime en <a href="" target="_blank">Instagram</a></p>
+          </div>
+      
+          <div class="footerContainer">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-code" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                  <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                  <path d="M10 13l-1 2l1 2" />
+                  <path d="M14 13l1 2l-1 2" />
+              </svg>
+              <p>Developer Web - <span>Agustin Alonso Cantoli</span></p>
+          </div>
+      
+              
+          <div class="footerContainer">        
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+              </svg>
+              <p>Copyright - Todos los derechos reservados &copy;</p>
+          </div>
+      
+        </div>
+    </footer>
+</body>
+</html>
